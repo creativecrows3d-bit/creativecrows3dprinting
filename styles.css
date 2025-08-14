@@ -1,0 +1,22 @@
+/* Creative Crows site */
+:root{--bg:#0b0f14;--fg:#e6f4ff;--muted:#9bb0c0;--brand:#8ec5ff;--card:#101720}
+*{box-sizing:border-box} html,body{margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+header{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;position:sticky;top:0;background:linear-gradient(180deg,rgba(11,15,20,.85),rgba(11,15,20,.55));border-bottom:1px solid rgba(158,192,255,.15);backdrop-filter:blur(6px)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--fg)}
+.brand img{width:40px;height:40px}
+.name{font-weight:700;letter-spacing:.3px}
+.badge{font-size:12px;color:var(--muted)}
+.toggle{border:1px solid rgba(158,192,255,.3);background:transparent;color:var(--fg);padding:8px 12px;border-radius:10px;cursor:pointer}
+.hero{padding:64px 24px;text-align:center}
+.hero h1{font-size:clamp(28px,5vw,56px);margin:10px 0}
+.hero p{color:var(--muted);max-width:800px;margin:0 auto 20px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+a.cta-btn{background:linear-gradient(135deg,var(--brand),#cbe7ff);color:#001425;border:0;padding:12px 18px;border-radius:12px;font-weight:700;text-decoration:none;box-shadow:0 6px 20px rgba(142,197,255,.25)}
+.section{padding:40px 24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);padding:18px;border-radius:14px;border:1px solid rgba(158,192,255,.15)}
+.card h3{margin:6px 0 8px}
+footer{padding:40px 24px;border-top:1px solid rgba(158,192,255,.15);color:var(--muted);text-align:center}
+.light{--bg:#ffffff;--fg:#0b0f14;--muted:#42576b;--brand:#0077ff;--card:#f6f8fb}
