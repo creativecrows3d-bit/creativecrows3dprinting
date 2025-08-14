@@ -1,42 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Creative Crows 3D Printing LLC — Custom 3D Printing</title>
-<meta name="description" content="Custom 3D printing, prototypes, and small-batch parts. Fast quotes and clean finishes.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Creative Crows 3D Printing LLC — Custom Prints, Prototyping, Small‑Batch</title>
+  <meta name="description" content="Creative Crows 3D Printing LLC brings your ideas to life with custom prints, prototypes, and small‑batch production. Quick quotes. Quality materials.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Creative Crows 3D Printing LLC">
+  <meta property="og:description" content="Custom 3D prints, prototyping, and small‑batch production.">
+  <meta property="og:image" content="https://creativecrows3dprinting.com/social-card.png">
+  <meta property="og:url" content="https://creativecrows3dprinting.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root { --bg:#ffffff; --fg:#111; --muted:#666; --accent:#0aa0ff; --card:#f5f7fa; }
+    .dark { --bg:#0f1115; --fg:#f3f6ff; --muted:#a3b0c2; --accent:#6ec1ff; --card:#141821; }
+    *{box-sizing:border-box} html,body{margin:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.55}
+    .wrap{max-width:1100px;margin:0 auto;padding:20px}
+    header{display:flex;align-items:center;gap:14px;padding:18px 0}
+    header img{width:44px;height:44px}
+    .spacer{flex:1}
+    button.toggle{border:1px solid var(--muted);background:transparent;color:var(--fg);padding:8px 12px;border-radius:10px;cursor:pointer}
+    .hero{padding:40px 0 10px;display:grid;gap:12px}
+    .hero h1{font-size:clamp(26px,5vw,40px);margin:0}
+    .hero p{margin:0;color:var(--muted)}
+    .cta{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 0}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none}
+    .btn.primary{background:var(--fg);color:var(--bg)}
+    .btn.secondary{border:1px solid var(--muted);color:var(--fg)}
+    section{padding:24px 0}
+    .card{background:var(--card);border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:18px}
+    .grid{display:grid;gap:14px}
+    @media(min-width:760px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.cols-2{grid-template-columns:repeat(2,1fr)} }
+    h2{margin:0 0 12px}
+    footer{padding:30px 0;color:var(--muted);font-size:14px}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-title{font-weight:700;letter-spacing:.2px}
+  </style>
 </head>
 <body>
-<header>
-  <a class="brand" href="#"><img src="assets/logo.svg" alt="Creative Crows logo"><div><div class="name">Creative Crows 3D Printing LLC</div><div class="badge">Custom prints • Prototypes • Small-batch</div></div></a>
-  <button id="themeToggle" class="toggle" aria-label="Toggle theme">Toggle theme</button>
-</header>
-<main>
-  <section class="hero container">
-    <h1>Ideas, printed.</h1>
-    <p>We turn concepts into physical parts using high‑quality FDM printing. Fast turnarounds, durable materials, and clean finishes—whether you need one‑off parts, short runs, or a showpiece.</p>
-    <div class="cta">
-      <a class="cta-btn" href="#contact">Get a quote</a>
-      <a class="cta-btn" href="mailto:info@creativecrows3dprinting.com">Email us</a>
-    </div>
-  </section>
-  <section class="section container">
-    <h2>Services</h2>
-    <div class="cards">
-      <div class="card"><h3>Custom Printing</h3><p>Upload a model or describe your idea. We’ll prepare, slice, and print with the right materials for your use case.</p></div>
-      <div class="card"><h3>Prototypes</h3><p>Rapid iteration for inventors and small businesses. Functional materials like PETG and TPU available.</p></div>
-      <div class="card"><h3>Design Assist</h3><p>From tweaks to full designs—get files optimized for strength, print time, and finish quality.</p></div>
-    </div>
-  </section>
-  <section class="section container" id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:info@creativecrows3dprinting.com">info@creativecrows3dprinting.com</a></p>
-    <p>Instagram & TikTok: <em>@creativecrows3d</em></p>
-    <p>Domain: www.creativecrows3dprinting.com</p>
-  </section>
-</main>
-<footer>© 2025 Creative Crows 3D Printing LLC. All rights reserved.</footer>
-<script src="script.js"></script>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Creative Crows logo">
+        <div class="logo-title">Creative Crows 3D Printing LLC</div>
+      </div>
+      <div class="spacer"></div>
+      <button class="toggle" id="modeBtn" aria-label="Toggle dark mode">🌙 Dark</button>
+    </header>
+
+    <section class="hero">
+      <h1>Your ideas, printed. Fast, clean, reliable.</h1>
+      <p>Custom 3D prints, functional prototypes, and small‑batch runs with pro materials and quality control.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:aiko@creativecrows3dprinting.com?subject=Quote%20Request">Get a Quote</a>
+        <a class="btn secondary" href="#services">See Services</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="card">
+        <h2>About</h2>
+        <p>Creative Crows 3D Printing <strong>LLC</strong> is a small studio focused on crisp, dimensionally accurate prints. We help makers, small businesses, and artists move from idea → prototype → small‑batch production.</p>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Services & Popular Items</h2>
+      <div class="grid cols-3">
+        <div class="card"><strong>Custom Orders</strong><br><span class="muted">From STLs or sketches</span></div>
+        <div class="card"><strong>Prototyping</strong><br><span class="muted">Fit checks & iterations</span></div>
+        <div class="card"><strong>Small‑Batch</strong><br><span class="muted">Consistent, repeatable parts</span></div>
+        <div class="card"><strong>Halloween Minis</strong><br><span class="muted">Pumpkins, skull pen cups, tea‑light ghosts</span></div>
+        <div class="card"><strong>Board‑Game Inserts</strong><br><span class="muted">Organizers for popular titles</span></div>
+        <div class="card"><strong>Tool Holders</strong><br><span class="muted">Shop/desk organization</span></div>
+        <div class="card"><strong>Phone Stands</strong><br><span class="muted">Minimal or themed</span></div>
+        <div class="card"><strong>Cosplay Pieces</strong><br><span class="muted">Sized to measurements</span></div>
+        <div class="card"><strong>Name Signs</strong><br><span class="muted">Layered/dual‑color</span></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="card grid cols-2">
+        <div>
+          <h2>Contact</h2>
+          <p>Email <a href="mailto:aiko@creativecrows3dprinting.com">aiko@creativecrows3dprinting.com</a> for quotes, timelines, or materials.</p>
+          <p class="muted">Attach your STL/STEP if available. I’ll reply with estimates (time, material, and price).</p>
+          <div class="cta">
+            <a class="btn primary" href="mailto:aiko@creativecrows3dprinting.com?subject=Quote%20Request">Start a Quote</a>
+            <a class="btn secondary" href="#">Shop (coming soon)</a>
+          </div>
+        </div>
+        <div>
+          <h2>Capabilities</h2>
+          <ul>
+            <li>PLA, PETG, TPU (more on request)</li>
+            <li>Up to 0.12–0.28 mm layers (quality vs speed)</li>
+            <li>Basic sanding/finishing available</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Creative Crows 3D Printing LLC · creativecrows3dprinting.com
+    </footer>
+  </div>
+
+  <script>
+    const key = "cc3d_theme";
+    const btn = document.getElementById("modeBtn");
+    function apply(mode){
+      document.documentElement.classList.toggle("dark", mode==="dark");
+      btn.textContent = mode==="dark" ? "☀️ Light" : "🌙 Dark";
+    }
+    const saved = localStorage.getItem(key) || "dark";
+    apply(saved);
+    btn.addEventListener("click", () => {
+      const next = document.documentElement.classList.contains("dark") ? "light" : "dark";
+      localStorage.setItem(key, next); apply(next);
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
